@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+
+@font-face {
+  font-family: 'icomoon';
+  src:    url('../fonts/icomoon.eot?fcj96u');
+  src:    url('../fonts/icomoon.eot?fcj96u#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?fcj96u') format('truetype'),
+  url('../fonts/icomoon.woff?fcj96u') format('woff'),
+  url('../fonts/icomoon.svg?fcj96u#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sun:before {
+  content: "\e900";
+}
+.icon-cloudy:before {
+  content: "\e901";
+}
+.icon-cloud:before {
+  content: "\e902";
+}
+.icon-rainy:before {
+  content: "\e903";
+}
+.icon-snowy:before {
+  content: "\e904";
+}
+.icon-cloudy2:before {
+  content: "\e905";
+}
+.icon-lightning:before {
+  content: "\e906";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #4E5860;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.weather {
+  padding: 30px;
+  border-radius: 29px;
+  background-color:  #f1f8f9;
+  box-shadow: 10px 18px 20.16px 0.84px rgba(0, 0, 0, 0.15);
+  width: 460px;
+  height: 300px;
+  margin: 60px auto;
+  position: relative;
+}
+
+.weather__info {
+  position: absolute;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  bottom: 90px;
+  left: 25%;
+  width: 100%;
+}
+
+.weather__city {
+  font-weight: bold;
+  color: #4c5e5c;
+}
+
+.weather__temp {
+  color:  #8d9396;
+  font-size: 60px;
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 8px;
+      top: 10px;
+      height: 8px;
+      border: 2px solid #8d9396;
+      border-radius: 50%;
+    }
+}
+
+.weather__desc {
+  color:  #bac2c6;
+  font-size: 24px;
+}
+
+.weather__block {
+  display: inline-block;
+}
+
+.weather__image {
+  text-align: center;
+}
+
+.icon {
+  font-size: 120px;
+  color: #778287;
+  margin-top: 25px;
+  display: inline-block;
+}
+
+
+
+
+
