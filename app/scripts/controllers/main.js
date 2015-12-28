@@ -11,8 +11,13 @@ angular.module('weatherApp')
       '09': 'icon-rainy',
       '10': 'icon-rainy',
       '11': 'icon-lightning',
-      '13': 'icon-snowy'
+      '13': 'icon-snowy',
+      '50': 'icon-cloudy2'
     };
+
+    function celsius(data) {
+      return (data - 32) * (5/9);
+    }
 
     location.getLocation(function (res) {
 
@@ -21,14 +26,14 @@ angular.module('weatherApp')
       var lon = loc[1];
 
       $scope.region = res.data.region;
+      $scope.city = res.data.city;
 
       weather.getWeather(lat, lon, function (res) {
 
         var data = res.data;
 
         $scope.icon = icons[data.weather[0].icon.substr(0, 2)];
-        $scope.city = data.name;
-        $scope.temp = data.main.temp;
+        $scope.temp = celsius(data.main.temp).toFixed(1);
         $scope.description = data.weather[0].description;
 
       });
